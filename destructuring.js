@@ -53,8 +53,17 @@ function greeting( obj ) {
   Sum up the values and return the total number.
 */
 
-//Code Here
+function totalPopulation(obj){
+  var {utah, california, texas, arizona} = obj
+  UT = utah;
+  CA = california;
+  TX = texas;
+  AZ = arizona;
 
+  var total = (UT + CA + TX + AZ);
+
+  return total;
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -67,7 +76,15 @@ function greeting( obj ) {
   Push these new variables to an array and return the array. 
 */
 
-//Code Here
+function ingredients (obj) {
+  var {carb, fat, protein} = obj
+  var carb = carb;
+  var fat = fat;
+  var protein = protein;
+  var food = [];
+  food.push(carb, fat, protein);
+  return food;
+}
 
 
 
@@ -85,8 +102,14 @@ function greeting( obj ) {
   Find the smallest number of the three and return that number.
 */
 
-//Code Here
-
+function largeNumbers ({
+  first = first,
+  second = second,
+  third = third,
+}) {
+  var smallest = Math.min(first, second, third);
+  return smallest;
+}
 
 
 ////////// PROBLEM 6 //////////
@@ -97,6 +120,12 @@ function greeting( obj ) {
   Find the longest array and return that array.
 */
 
-//Code Here
+function numberGroups ({
+  arrA = a.length, 
+  arrB = b.length,
+  arrC = c.length
+}) {
+return Math.max(arrA, arrB, arrC);
+}
 
 

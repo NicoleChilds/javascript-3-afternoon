@@ -125,7 +125,7 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
+var grumpyActivity = (catFriends[0], activities[1]);
 var fluffy2ndFriend;
 
 

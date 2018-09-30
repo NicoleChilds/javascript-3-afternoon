@@ -94,8 +94,39 @@ class Manager extends Employee {
   Call your new class ProgressiveManager
 */
 
-//Code Here
-
+class ProgressiveManager extends Employee {
+  constructor (first_name, last_name, email, age, reports, title, bonus){
+    super(first_name, last_name, email, age);
+    this.reports = [];
+    this.title = 'Not a manager';
+    this.bonus = 0;
+  }
+  hire (employee){
+    this.reports.push(employee);
+  }
+  fire (index, bonus){
+    this.reports.splice(index,1);
+    this.bonus = bonus + $100;
+  }
+  updateTitle (){
+    var reports = [];
+    for (var i = 0; i < reports.length; i++)
+      if ((reports[i]) == 0) {
+        this.title="Not a manager"
+      } else if ((reports[i])  <=3) {
+        this.title = "Barely Manager"
+      } else if ((reports[i]) <=10) {
+        this.title = "Mostly Manager" 
+      } else if ((reports[i]) <= 50) {
+        this.title = "Manager"
+      } else if ((reports[i]) <= 100) {
+        this.title = "Manager Plus"
+      } else {
+        this.title = "Bestest Manager";
+      }
+    }
+  }
+  
 
 
 ////////// PROBLEM 4 - Black Diamond //////////
